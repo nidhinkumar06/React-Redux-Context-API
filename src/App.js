@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import GlobalState from './context/GlobalState';
@@ -6,8 +6,7 @@ import ProductsPage from './pages/Products';
 import CartPage from './pages/Cart';
 import './App.css';
 
-class App extends Component {
-  render() {
+const App = props => {
     return (
       <GlobalState>
         <BrowserRouter>
@@ -18,7 +17,6 @@ class App extends Component {
         </BrowserRouter>
       </GlobalState>
     );
-  }
 }
 
 export default App;
